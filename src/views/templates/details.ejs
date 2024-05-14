@@ -1,0 +1,18 @@
+  <%- include("../partials/head.ejs") %>
+  <body>
+      <%- include("../partials/navbar.ejs") %>
+    </nav>
+    <section class="height">
+      <h2>Details</h2>
+      <div class="about-container">
+        <div class="about-image"><img src="<%= response.product_url%>" alt=""></div>
+        <div class="about-text">
+          <h1><%=response.product_name%></h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolores iure aut, nihil repellat magnam vitae veniam labore exercitationem corporis voluptas. Dolores alias excepturi nesciunt reprehenderit possimus temporibus mollitia cum error tempora sapiente accusamus animi aliquid ducimus, provident deleniti similique! Incidunt consequuntur accusantium odio harum architecto, qui quo sequi expedita debitis laboriosam perspiciatis, temporibus et dolore! Repudiandae dolorem alias placeat optio! Praesentium accusamus explicabo, optio minus assumenda officiis a cupiditate laboriosam labore quia ex cumque, corporis temporibus voluptate itaque reprehenderit aliquam! Voluptatibus expedita labore doloribus veritatis quaerat ab totam libero autem, eum sequi tempora cum facilis possimus quod similique deleniti.</p>
+          <button class="button-submit order">Order Now</button>
+        </div>
+      </div>
+    </section>
+      <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

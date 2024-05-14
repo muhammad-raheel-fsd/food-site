@@ -1,0 +1,42 @@
+  <%- include("../partials/head.ejs") %>
+  <body>
+      <%- include("../partials/navbar.ejs") %>
+    </nav>
+    <section class="height">
+      <h2>Signup</h2>
+      <div class="form-container">
+        <form id="form">
+          <input
+            required
+            class="input margin-input"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter Your Name"
+          />
+
+          <input
+            required
+            class="input margin-input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Email"
+          />
+
+          <input
+            required
+            class="input margin-input"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter Password"
+          />
+          <button class="button-submit margin-input">Submit</button>
+        </form>
+      </div>
+    </section>
+      <%- include("../partials/footer.ejs") %>
+      <script src="./js/signup.js"></script>
+  </body>
+</html>

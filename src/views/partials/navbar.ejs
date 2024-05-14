@@ -1,0 +1,29 @@
+<i class="fa-solid fa-bars hamburger"></i>
+<div class="nav-area">
+  <nav class="navbar padding">
+    <img src="images/logo-white.png" alt="" class="logo" />
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About US</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/contact">Contact us</a></li>
+      <% if(!valid){ %>
+      <li><a class="login-button" href="/login">LOGIN</a></li>
+      <li><a class="login-button" href="/signup">SIGNUP</a></li>
+      <%} else {%>
+      <li><a id="logout" class="login-button" href="/logout">LOGOUT</a></li>
+      <script>
+        const logout = document.getElementById("logout");
+
+        logout.addEventListener("click", async (event) => {
+          event.preventDefault();
+          const response = await fetch("/logout");
+          const data = await response.json();
+
+          window.location.href = data.redirect;
+        });
+      </script>
+      <%}%>
+    </ul>
+  </nav>
+</div>

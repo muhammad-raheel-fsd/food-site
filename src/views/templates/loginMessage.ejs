@@ -1,0 +1,18 @@
+  <%- include("../partials/head.ejs") %>
+  <body>
+      <%- include("../partials/navbar.ejs") %>
+    <section class="section padding" >
+        
+        <h3>Please login to continue...</h3>
+        <button class="login-button back-button" style="color: white; display: block; margin-top: 0.5rem; font-size: 1rem; padding: 1rem 2rem;">Go back</button>
+        
+    </section>
+      <%- include("../partials/footer.ejs") %>
+      <script>
+        const backButton = document.querySelector(".back-button");
+        backButton.addEventListener("click",(event)=>{
+          window.history.back();
+        })
+      </script>
+  </body>
+</html>

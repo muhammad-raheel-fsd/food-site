@@ -1,0 +1,75 @@
+  <%- include("../partials/head.ejs") %>
+  <body>
+      <%- include("../partials/navbar.ejs") %>
+    </nav>
+    <section class="height">
+      <h2>Contact us</h2>
+      <div class="form-container">
+        <form action="#" method="POST">
+          <input
+            class="input margin-input"
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="Enter first name"
+          />
+          <input
+            class="input margin-input"
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Enter last name"
+          />
+          <div class="form-flex margin-input">
+            <div class="flex-left"><label for="gender">Gender : </label></div>
+            <div class="gender-flex">
+              <div class="gender-left">
+                <label for="male">Male</label>
+                <input class="radio" type="radio" name="gender" id="male" />
+              </div>
+              <div class="gender-right">
+                <label for="female">Female</label>
+                <input class="radio" type="radio" name="gender" id="female" />
+              </div>
+            </div>
+          </div>
+          <input
+            class="input margin-input"
+            type="tel"
+            name="mobile"
+            id="mobile"
+            placeholder="Enter mobile number"
+          />
+          <div class="form-flex margin-input">
+            <label for="dob">Enter DOB : </label>
+            <input class="flex-input" type="date" name="dob" id="dob" />
+          </div>
+          <input
+            class="input margin-input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email address"
+          />
+          <div class="form-flex margin-input">
+            <label for="language">Language of communication : </label>
+            <select class="flex-input" name="language" id="language">
+              <option value="English">English</option>
+              <option value="French">French</option>
+              <option value="Spanish">Spanish</option>
+            </select>
+          </div>
+          <textarea
+            class="input margin-input"
+            name="message"
+            id="message"
+            cols="30"
+            rows="5"
+          ></textarea>
+          <button type="submit" class="button-submit margin-input">Submit</button>
+        </form>
+      </div>
+    </section>
+      <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

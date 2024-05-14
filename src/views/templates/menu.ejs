@@ -1,0 +1,25 @@
+  <%- include("../partials/head.ejs") %>
+  <body>
+      <%- include("../partials/navbar.ejs") %>
+    <section class="section favourite">
+      <h2>Meals for you</h2>
+        <div class="panel">
+          <% if(response){ 
+            response.forEach((item)=>{ %>
+                <a class="subpanel" href="/details/<%= item.product_id%>">
+                  <img src="<%= item.product_url%>" alt="menu-img" class="menu-img"><br>
+                  <div class="subpanel-hover">
+                    <div class="subpanel-text">
+                      <p class="title"><%= item.product_name%></p>
+                    <span class="price">Price : $<%= item.product_price%></span>
+                    </div>
+                  </div>
+                </a>
+              <% })} %>
+              
+        </div>
+      
+    </section>
+      <%- include("../partials/footer.ejs") %>
+  </body>
+</html>
